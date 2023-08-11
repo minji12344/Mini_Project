@@ -14,7 +14,7 @@ public class Book {
 	}
 	
 	void printBook() {
-		System.out.println("도서 이름 :" + name);
+		System.out.println("도서 제목 :" + name);
 	}
 	
 	void start() {
@@ -23,7 +23,15 @@ public class Book {
 		int num =scan.nextInt();
 		
 		if(num == 1) {
-			
+			System.out.println("1.대출 2.반납 3.보고간다");
+			int num2 = scan.nextInt();
+			if(num == 1) {
+//				Library.Booklist();				
+			}else if(num == 2){
+				
+			}else if(num == 3){
+//				Read.printBook();
+			}
 		}
 		System.out.println("");
 	}

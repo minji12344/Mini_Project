@@ -1,20 +1,23 @@
 package Books;
 
 public class Read extends Library{
-	static int read_time;
+	static final int read_time = (int)(Math.random())*6+1;
 
+	Read(){
+		
+	}
+	
 	Read(String name){
 		super(name);
 	}
 	
 	Read(String name ,int read_time){
 		super(name);
-		this.read_time = read_time;
 	}
 	
 	@Override
 	void printBook() {
 		super.printBook();
-		System.out.println(super.getName() + "을 봅니다.");
+		System.out.println("'" + super.getName()+ "' 도서를 " + read_time + "시간 읽었습니다.");
 	}
 }
