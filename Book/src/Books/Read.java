@@ -15,6 +15,11 @@ public class Read extends Library{
 		super(name);
 	}
 	
+	void printBook(Read read) {
+		super.printBook();
+		System.out.println("'" + super.getName()+ "' 도서를 " + read_time + "시간 읽었습니다.");
+	}
+	
 	@Override
 	void printBook() {
 		super.printBook();
