@@ -8,6 +8,7 @@ public class Borrow extends Library{
 	static ArrayList <String> BookList = new ArrayList<>();
 	
 	Borrow(){
+		System.out.println("*****도서 목록*****");
 		BookList.add("도서관에_간_사자");
 		BookList.add("실수쟁이_꼬마_돼지의_하루");	
 		BookList.add("밤의_도서관");	
@@ -22,13 +23,12 @@ public class Borrow extends Library{
 	
 	void Bookremove(Borrow remove) {
 		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("*****도서 목록*****");
-		
+			
 //		int i = BookList.size();
 		for(int i = 0; i< BookList.size();i++) {
 			System.out.println("'" + BookList.get(i) + "'");
 		}
+//		Borrow();
 		
 		System.out.print("대출 하는 도서를 입력해주세요 : ");
 		String loan = scan.next();
@@ -43,6 +43,7 @@ public class Borrow extends Library{
 		
 		if(book == 1) {
 			System.out.println("'" + loan + "' 도서가 대출이 완료되었습니다.");
+			BookList.remove(loan);	
 		}
 		else {
 			System.out.println("'" +loan + "' 도서가 없습니다.");
