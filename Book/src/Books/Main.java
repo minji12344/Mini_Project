@@ -2,17 +2,23 @@ package Books;
 
 import java.util.ArrayList;
 
+import Client.Refund;
+
 public class Main {
 
 	public static void main(String[] args) {
 		
-		Book book = new Book();
+//		Book book = new Book();
+//		
+//		Buy boo = new Buy(2022,5,13);
+//		Sell bo2 = new Sell("나비");
+//		Sell bo = new Sell(2800);
+//		Sell bo1 = new Sell(2020,10,5);
+//		book.start();
+//		
+		Refund re = new Refund("alswl", 5000);
+		re.printRefund();
 		
-		Buy boo = new Buy(2022,5,13);
-		Sell bo2 = new Sell("나비");
-		Sell bo = new Sell(2800);
-		Sell bo1 = new Sell(2020,10,5);
-		book.start();
 //		
 //		boo.BookBuy();
 //		
