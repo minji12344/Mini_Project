@@ -7,7 +7,16 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Book book = new Book();
-		book.start("책");
+		
+		Buy boo = new Buy(2022,5,13);
+		Sell bo2 = new Sell("나비");
+		Sell bo = new Sell(2800);
+		Sell bo1 = new Sell(2020,10,5);
+		book.start();
+//		
+//		boo.BookBuy();
+//		
+//		bo.printBook();
 		
 //		Borrow borrow = new Borrow(); // 도서관 대출
 //		borrow.Bookremove(borrow);

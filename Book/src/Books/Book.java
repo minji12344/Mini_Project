@@ -6,7 +6,7 @@ public class Book {
 	static private String name;
 	
 	Book(){
-		name = "책";
+		
 	}
 	
 	Book(String name){
@@ -21,7 +21,7 @@ public class Book {
 //		System.out.println("도서 제목 :" + name);
 //	}
 	
-	void start(String string) {
+	void start() {
 		while(true) {
 			Scanner scan = new Scanner(System.in);
 			System.out.println("1.도서관에 갑니다 2.서점에 갑니다. 3. 집에 갑니다.");
@@ -42,7 +42,19 @@ public class Book {
 				}
 			}
 			else if(num == 2) {
-				System.out.println("서점");	
+				System.out.println("1.구입 2.판매");
+				int num2 = scan.nextInt();
+				if(num2 == 1) {
+					Buy buy = new Buy(5000);
+					buy.BookBuy();
+				}else if(num2 == 2) {
+					Sell sell = new Sell();
+					sell.printBook();
+					
+				}else {
+					System.out.println("잘못입력하였습니다.");
+				}
+				
 			}
 			else if(num == 3) {
 				System.out.println("종료");

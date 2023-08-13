@@ -15,13 +15,6 @@ public abstract class Library extends Book{
 	@Override
 	void printBook() {
 		super.printBook();
-		System.out.println("나왔다");
 	}
 
-	String getName() {
-		return super.getName();
-	}
-	void setName(String name) {
-		super.setName(name);
-	}
 }
