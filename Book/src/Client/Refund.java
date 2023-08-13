@@ -8,12 +8,12 @@ public class Refund extends Call{
 //		this.Price = Price;
 //	}
 	
-	public Refund(String name) {
-		super(name);
+	public Refund(String name,int Score) {
+		super(name,Score);
 	}
 	
-	public Refund(String name, int Price) {
-		super(name);
+	public Refund(String name, int Score, int Price) {
+		super(name,Score);
 		this.Price = Price;
 	}
 

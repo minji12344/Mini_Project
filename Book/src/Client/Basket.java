@@ -2,8 +2,8 @@ package Client;
 //장바구니
 public class Basket extends Internet{
 
-	Basket(String name){
-		super(name);
+	Basket(String name,int Score){
+		super(name, Score);
 	}
 	
 	@Override

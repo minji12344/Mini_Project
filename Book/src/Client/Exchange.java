@@ -2,8 +2,8 @@ package Client;
 //교환
 public class Exchange extends Call{
 
-	Exchange(String name){
-		super(name);
+	Exchange(String name,int Score){
+		super(name,Score);
 	}
 	
 	void Exchange() {

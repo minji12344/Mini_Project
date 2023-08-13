@@ -2,12 +2,14 @@ package Client;
 //고객
 public class Client {
 	private String name;
+	private int Score;
 	
 	Client(){
 		name = "이름";
 	}
-	Client(String name){
+	Client(String name, int Score){
 		this.name = name;
+		this.Score = Score;
 	}
 	
 	void printClient() { 
@@ -21,5 +23,7 @@ public class Client {
 		this.name = name;
 	}
 	
-	
+	int getScore() {
+		return Score;
+	}
 }
