@@ -1,11 +1,11 @@
 package Books;
-
+// 도서관 - 빌리다
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Borrow extends Library{
-	static final int Borrow_time = (int)(Math.random()*6+1);
-	static ArrayList <String> BookList = new ArrayList<>();
+	int Borrow_time = (int)(Math.random()*6+1);
+	ArrayList <String> BookList = new ArrayList<>();
 	static Scanner scan = new Scanner(System.in);
 	
 	Borrow(){
@@ -14,6 +14,7 @@ public class Borrow extends Library{
 		BookList.add("밤의 도서관");	
 		BookList.add("사서e마을 이야기");	
 	}
+	
 	Borrow(String name){
 		super(name);
 	}
@@ -21,7 +22,7 @@ public class Borrow extends Library{
 		super(name);
 	}
 	
-	void Bookremove(Borrow remove) {
+	public void Bookremove() {
 			
 		System.out.println("*****도서 목록*****");
 //		int i = BookList.size();
@@ -42,6 +43,7 @@ public class Borrow extends Library{
 		}
 		
 		if(book == 1) {
+			Borrow_time = (int)(Math.random()*6+1);
 			System.out.println("'" + loan + "' 도서가 대출이 완료되었습니다.");
 			System.out.println("대출 기간은 " + Borrow_time + " 일 입니다.");
 			BookList.remove(loan);	
@@ -53,7 +55,7 @@ public class Borrow extends Library{
 		System.out.println("============================");
 	}
 	
-	static void Bookadd(Borrow add) {
+	public void Bookadd() {
 		
 		System.out.print("반납 하는 도서를 입력해주세요 : ");
 		String loan = scan.nextLine();
@@ -74,7 +76,7 @@ public class Borrow extends Library{
 	void printBook() {
 		super.printBook();
 		System.out.println("대출 하는 도서는 : " + super.getName() + " 입니다.");
-		System.out.println("대출 기간은 " + Borrow_time + " 일 입니다.");
+		System.out.println("대출 기간은 " + this.Borrow_time + " 일 입니다.");
 	}
 
 	

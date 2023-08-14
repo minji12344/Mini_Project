@@ -2,28 +2,36 @@ package Client;
 //환불
 public class Refund extends Call{
 	static int Price;
-	static final double refund = (Price/1.05);
+	double refund = (Price*0.95);
 	
-//	public Refund(int Price) {
-//		this.Price = Price;
-//	}
+	Refund() {
 	
-	public Refund(String name,int Score) {
+	}
+	
+	public Refund(double refund) {
+		this.refund = refund;
+	}
+	
+	Refund(String name,int Score) {
 		super(name,Score);
 	}
 	
-	public Refund(String name, int Score, int Price) {
+	Refund(String name, int Score, int Price) {
 		super(name,Score);
 		this.Price = Price;
 	}
 
-	public void printRefund() {
-		System.out.println((int)refund + "원 환불이 되었습니다.");
+	
+	void printClient() {
+		super.printClient();
+		System.out.println("도서 제목 : " );
+		System.out.println((int)refund + "원 환불이 되었습니다.");	
 	}
 	
 	@Override
-	String Refund() {
+	String Call() {
 		System.out.println("고객 성함 : " + super.getName());
+		System.out.println((int)refund + "원 환불이 되었습니다.");
 		return "name";
 	}
 

@@ -3,13 +3,14 @@ package Books;
 import java.util.Scanner;
 
 public class Book {
-	static private String name;
-	
-	Book(){
+	private static String name;
+//	Borrow remove = new Borrow();
+
+	public Book(){
 		
 	}
 	
-	Book(String name){
+	public Book(String name){
 		this.name = name;
 	}
 	
@@ -21,31 +22,31 @@ public class Book {
 //		System.out.println("도서 제목 :" + name);
 //	}
 	
-	void start() {
+	public void start() {
+		Borrow remove = new Borrow();
+		Read read1 = new Read();
+
 		while(true) {
 			Scanner scan = new Scanner(System.in);
-			System.out.println("1.도서관에 갑니다 2.서점에 갑니다. 3. 집에 갑니다.");
+			System.out.println("1.도서관에 갑니다 2.서점에 갑니다. 3.집에 갑니다.");
 			int num =scan.nextInt();
 			
 			if(num == 1) {
 				System.out.println("1.대출 2.반납 3.독서");
 				int num2 = scan.nextInt();
 				if(num2 == 1) {
-					Borrow remove = new Borrow();
-					remove.Bookremove(remove);
+					remove.Bookremove();
 				}else if(num2 == 2){
-					Borrow add = new Borrow();
-					add.Bookadd(add);
+					remove.Bookadd();
 				}else if(num2 == 3){
-					Read read1 = new Read();
-					read1.printBook(read1);
+					read1.printBook();
 				}
 			}
 			else if(num == 2) {
 				System.out.println("1.구입 2.판매");
 				int num2 = scan.nextInt();
 				if(num2 == 1) {
-					Buy buy = new Buy(5000);
+					Buy buy = new Buy();
 					buy.BookBuy();
 				}else if(num2 == 2) {
 					Sell sell = new Sell();
@@ -69,6 +70,7 @@ public class Book {
 	String getName() {
 		return name;
 	}
+	
 	void setName(String name) {
 		this.name = name;
 	}

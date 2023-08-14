@@ -2,13 +2,23 @@ package Client;
 //전화
 public abstract class Call extends Client {
 	
+	Call(){
+		
+	}
+	
 	Call(String name,int Score){
 		super(name,Score);
 	}
 	
-	abstract String Refund();
+	abstract String Call();
 	
+	@Override
 	void printClient() {
-		System.out.println("고객 성함 : ");
+		super.printClient();
+	}
+
+	String printRefund() {
+		super.printClient();
+		return "name";
 	}
 }

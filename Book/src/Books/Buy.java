@@ -1,26 +1,28 @@
 package Books;
-// 사는 사람
+//서점 - 사는 사람
 public class Buy extends Economy{
 	
-	Buy(String name){
+	public Buy(){
+		super();
+	}
+	
+	public Buy(String name){
 		super(name);
 	}
 	
-	Buy(int price){
+	public Buy(int price){
 		super(price);
 	}
 	
-	Buy(int year, int month, int day){
+	public Buy(int year, int month, int day){
 		super(year, month, day);
 	}
 	
 	void BookBuy() {
 		System.out.println("*****도서 목록*****");
-//		for(int i = 0; i< BookList.size();i++) {
-//			System.out.println("'" + BookList.get(i) + "'");
-		super.Economylist();
-
-//		}
+		for(int i = 0; i< BookList.size();i++) {
+			System.out.println("'" + BookList.get(i) + "'");
+		}
 	
 		System.out.print("구입하는 도서를 입력해주세요 : ");
 		String loan = scan.nextLine();
