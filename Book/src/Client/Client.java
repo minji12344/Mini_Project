@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //고객
 public class Client {
-	private static String name; // 고객성함
+	private String name; // 고객성함
 	private int Score; // 평점
 //	private int num;
 //	private final int Score1 = Score/num;

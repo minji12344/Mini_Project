@@ -2,9 +2,6 @@ package Books;
 // 파는 사람
 public class Sell extends Economy{
 	
-	public Sell(){
-		
-	}
 	
 	public Sell(String name){
 		super(name);

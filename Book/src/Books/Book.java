@@ -3,7 +3,7 @@ package Books;
 import java.util.Scanner;
 
 public class Book {
-	private static String name;
+	private String name;
 //	Borrow remove = new Borrow();
 
 	public Book(){
@@ -49,7 +49,9 @@ public class Book {
 					Buy buy = new Buy();
 					buy.BookBuy();
 				}else if(num2 == 2) {
-					Sell sell = new Sell();
+					System.out.println("판매 할 도서명 : ");
+					String a = scan.nextLine();
+					Sell sell = new Sell(2023,02,03);
 					sell.printBook();
 					
 				}else {

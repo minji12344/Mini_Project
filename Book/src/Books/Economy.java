@@ -7,10 +7,10 @@ public abstract class Economy extends Book {
 	static ArrayList <String> BookList = new ArrayList<>();
 	static Scanner scan = new Scanner(System.in);
 
-	private static int Price; // 가격
-	private static int year; 
-	private static int month; 
-	private static int day;
+	private int Price; // 가격
+	private int year; 
+	private int month; 
+	private int day;
 	
 	Economy(){
 		BookList.add("아메리칸 프로메테우스(특별판)");
