@@ -3,6 +3,7 @@ package Books;
 import java.util.ArrayList;
 
 import Client.Refund;
+import Client.Review;
 
 public class Main {
 
@@ -16,12 +17,15 @@ public class Main {
 //		Sell bo1 = new Sell(2020,10,5);
 //		book.start();
 //		
-		Refund re = new Refund("alswl", 5000);
+		Refund re = new Refund("alswl", 5500);
 		re.printRefund();
 		
-//		
+		Review rev = new Review("ss", 0);
+		rev.printcomments();
+				
+		
 //		boo.BookBuy();
-//		
+
 //		bo.printBook();
 		
 //		Borrow borrow = new Borrow(); // 도서관 대출

@@ -7,11 +7,12 @@ public class Review extends Internet{
 	static ArrayList <String> view = new ArrayList<>();
 	static Scanner scan = new Scanner(System.in);
 	
+	
 	public Review(String name,int Score) {
 		super(name,Score);
 	}
 
-	void printcomments() {
+	public void printcomments() {
 		System.out.println("댓글을 입력해주세요 : ");
 		String review = scan.next();
 		
@@ -20,7 +21,9 @@ public class Review extends Internet{
 		view.add("읽는 마음이 내내 흐뭇했다.");
 		view.add(review);
 		
-		
+		for(int i = 0; i< view.size();i++) {
+			System.out.println("'" + view.get(i) + "'");
+		}
 	}
 	
 	@Override
