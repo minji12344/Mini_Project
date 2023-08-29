@@ -24,7 +24,9 @@ public class Book {
 	
 	public void start() {
 		Borrow remove = new Borrow();
-		Read read1 = new Read();
+		Read read = new Read();
+		Sell sell = new Sell();
+		Buy buy = new Buy();
 
 		while(true) {
 			Scanner scan = new Scanner(System.in);
@@ -39,19 +41,15 @@ public class Book {
 				}else if(num2 == 2){
 					remove.Bookadd();
 				}else if(num2 == 3){
-					read1.printBook();
+					read.printBook();
 				}
 			}
 			else if(num == 2) {
 				System.out.println("1.구입 2.판매");
 				int num2 = scan.nextInt();
 				if(num2 == 1) {
-					Buy buy = new Buy();
 					buy.BookBuy();
 				}else if(num2 == 2) {
-					System.out.println("판매 할 도서명 : ");
-					String a = scan.nextLine();
-					Sell sell = new Sell(2023,02,03);
 					sell.printBook();
 					
 				}else {

@@ -10,9 +10,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Book book = new Book("내 이름은");
-		
-		Buy boo1 = new Buy(520000);
-		Buy boo = new Buy(2022,5,13);
+//		
+//		Buy boo1 = new Buy(520000);
+//		Buy boo = new Buy(2022,5,13);
 		
 		//Read bo2 = new Read("ㄴㄴㄴ");
 //		Sell bo3 = new Sell("__11");
@@ -20,6 +20,7 @@ public class Main {
 //		Sell bo1 = new Sell(2020,10,5);
 		Client client = new Client();
 //		Refund re = new Refund(2);
+		
 		
 		
 		book.start();

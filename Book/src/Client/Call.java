@@ -1,5 +1,5 @@
 package Client;
-//전화
+//고객센터 = 전화문의
 public abstract class Call extends Client {
 	
 	Call(){

@@ -7,10 +7,10 @@ public abstract class Economy extends Book {
 	static ArrayList <String> BookList = new ArrayList<>();
 	static Scanner scan = new Scanner(System.in);
 
-	private int Price; // 가격
-	private int year; 
-	private int month; 
-	private int day;
+	private int Price= 13000 + (int)(Math.random()*10000+1);// 가격
+	private int year = 2000 + (int)(Math.random()*31+1); // 년
+	private int month = (int)(Math.random()*12+1);// 월
+	private int day = (int)(Math.random()*31+1);  // 일
 	
 	Economy(){
 		BookList.add("아메리칸 프로메테우스(특별판)");
@@ -21,6 +21,11 @@ public abstract class Economy extends Book {
 	
 	Economy(String name){
 		super(name);
+	}
+	
+	Economy(String name, int Price){
+		super(name);
+		this.Price = Price;
 	}
 	
 	Economy(int Price){
@@ -36,8 +41,8 @@ public abstract class Economy extends Book {
 
 	@Override
 	void printBook() {
-		System.out.println("도서 가격은 " + this.Price + " 입니다.");
-		System.out.println("도서의 발행일은 " + year + "년 " + month+ "월 " + day+ "일 입니다.");
+		System.out.println("* 도서 가격은 " + this.Price + "원 입니다.");
+		System.out.println("* 도서의 발행일은 " + year + "년 " + month+ "월 " + day+ "일 입니다.");
 
 	}
 	

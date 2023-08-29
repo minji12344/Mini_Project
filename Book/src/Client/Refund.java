@@ -1,7 +1,7 @@
 package Client;
-//환불
+//전화문의 = 환불
 public class Refund extends Call{
-	static int Price;
+	static int Price = 5000 + (int)(Math.random()*2000+1);
 	double refund = (Price*0.95);
 	
 	Refund() {
@@ -24,13 +24,12 @@ public class Refund extends Call{
 	
 	void printClient() {
 		super.printClient();
-		System.out.println("도서 제목 : " );
 		System.out.println((int)refund + "원 환불이 되었습니다.");	
 	}
 	
 	@Override
 	String Call() {
-		System.out.println("고객 성함 : " + super.getName());
+		System.out.println("고객 성함 : " + this.getName());
 		System.out.println((int)refund + "원 환불이 되었습니다.");
 		return "name";
 	}

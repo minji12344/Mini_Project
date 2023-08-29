@@ -2,8 +2,9 @@ package Client;
 
 import java.util.Scanner;
 
-//고객
+//부모 = 고객센터
 public class Client {
+	Scanner scan = new Scanner(System.in);
 	private String name; // 고객성함
 	private int Score; // 평점
 //	private int num;
@@ -28,8 +29,8 @@ public class Client {
 		Basket bask = new Basket();
 		
 		while(true) {
-			Scanner scan = new Scanner(System.in);
 			
+			System.out.println("~~~~고객센터입니다~~~~");
 			System.out.println("1.전화문의 2.인터넷문의 3.종료");
 			int a = scan.nextInt();
 			
@@ -64,7 +65,11 @@ public class Client {
 		}
 	}
 	void printClient() { 
-		System.out.println("고객 성함 : " + name);
+		System.out.print("고객성함 : ");
+		String a = scan.nextLine();
+		System.out.print("도서제목 : ");
+		String b = scan.nextLine();
+		System.out.println("*고객 성함 : " + a + ", 도서 제목 : " + b);
 	}
 	
 	String getName() {

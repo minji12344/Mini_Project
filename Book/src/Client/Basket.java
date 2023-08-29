@@ -2,7 +2,7 @@ package Client;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-//장바구니
+//인터넷문의 = 장바구니
 public class Basket extends Internet{
 	Scanner scan = new Scanner(System.in);
 	static ArrayList <String> Basket = new ArrayList<>();
