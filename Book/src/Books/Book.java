@@ -1,5 +1,5 @@
 package Books;
-
+// 도서관, 서점 (부모)
 import java.util.Scanner;
 
 public class Book {

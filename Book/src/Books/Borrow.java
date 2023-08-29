@@ -1,5 +1,5 @@
 package Books;
-// 도서관 - 빌리다
+// 도서관 - 빌리다, 반납하다
 import java.util.ArrayList;
 import java.util.Scanner;
 

@@ -1,5 +1,5 @@
 package Books;
-
+// 도서관
 public abstract class Library extends Book{
 	
 	Library(){

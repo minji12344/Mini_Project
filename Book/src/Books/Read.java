@@ -1,5 +1,5 @@
 package Books;
-
+// 도서관 - 3 독서
 public class Read extends Library{
 	int read_time = (int)(Math.random()*8+1);
 
