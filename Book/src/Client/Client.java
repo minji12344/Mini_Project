@@ -54,6 +54,16 @@ public class Client {
 				
 				if(c == 1) {
 					bask.printBasket(bask);
+					System.out.println("1. 담기 2. 결제하기");
+					int d = scan.nextInt();
+					
+//					if(d == 1) {
+//						bask.printBasket(bask);
+//					}
+//					else if(d==2) {
+//						System.out.println("****결제창***");
+//					}
+					
 				}else if(c == 2) {
 					revi.printcomments(revi);
 				}
