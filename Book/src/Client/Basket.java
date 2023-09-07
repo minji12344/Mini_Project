@@ -5,7 +5,7 @@ import java.util.Scanner;
 //인터넷문의 = 장바구니
 public class Basket extends Internet{
 	Scanner scan = new Scanner(System.in);
-	static ArrayList <String> Basket = new ArrayList<>();
+	ArrayList <String> Basket = new ArrayList<>();
 
 	Basket(){
 		

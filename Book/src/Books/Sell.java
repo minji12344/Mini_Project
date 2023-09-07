@@ -25,7 +25,7 @@ public class Sell extends Economy{
 		String a = scan.nextLine();
 		System.out.print("♥ 도서의 원가 : ");
 		int b = scan.nextInt();
-		super.printBook();
+		super.printBook2();
 		System.out.println("*'" + a +"' 도서를 " + (int)b*0.8 + "원에 판매하였습니다.");
 		System.out.println("======================================");
 
